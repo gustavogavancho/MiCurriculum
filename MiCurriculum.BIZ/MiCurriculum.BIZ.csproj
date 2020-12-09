@@ -4,4 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MiCurriculum.COMMON\MiCurriculum.COMMON.csproj" />
+    <ProjectReference Include="..\MiCurriculum.DAL.Local.LiteDB\MiCurriculum.DAL.Local.LiteDB.csproj" />
+  </ItemGroup>
+
 </Project>
