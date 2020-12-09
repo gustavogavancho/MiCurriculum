@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MiCurriculum.UI.WPF.Usuario
+namespace MiCurriculum.UI.WPF.Usuario.CustomControls
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CardPerfilItem.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CardPerfilItem : UserControl
     {
-        public MainWindow()
+        public CardPerfilItem()
         {
             InitializeComponent();
         }
