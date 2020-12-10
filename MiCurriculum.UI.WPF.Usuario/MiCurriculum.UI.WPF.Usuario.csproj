@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -59,6 +60,9 @@
     <Compile Include="CustomControls\CardPerfilItem.xaml.cs">
       <DependentUpon>CardPerfilItem.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\CustomMessageBox.xaml.cs">
+      <DependentUpon>CustomMessageBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\BaseViewModel.cs" />
     <Compile Include="Helpers\RelayCommand.cs" />
     <Compile Include="ViewModels\MainWindowModel.cs" />
@@ -70,6 +74,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="CustomControls\CardPerfilItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\CustomMessageBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -110,6 +118,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagenes\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\application.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

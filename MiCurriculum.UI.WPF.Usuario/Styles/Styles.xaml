@@ -25,6 +25,12 @@
         <Setter Property="Foreground" Value="{StaticResource PrimaryBrush}"/>
     </Style>
 
+    <Style x:Key="WhiteTextTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource SubTitleTextBlockStyle}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Foreground" Value="{StaticResource SecondaryBrush}"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+    </Style>
+
     <Style x:Key="IconTextBlockStyle" TargetType="TextBlock">
         <Setter Property="Foreground" Value="{StaticResource SecondaryBrush}"/>
         <Setter Property="FontFamily" Value="Segoe MDL2 Assets"/>
@@ -32,7 +38,7 @@
         <Setter Property="Margin" Value="5"/>
     </Style>
     
-    <!-- Button -->
+    <!-- Button -->    
     <Style x:Key="ButtonPrimaryStyle" TargetType="Button">
         <Style.Resources>
             <Style TargetType="Border">
@@ -51,6 +57,18 @@
     <Style x:Key="ButtonSecondaryStyle" TargetType="Button" BasedOn="{StaticResource ButtonPrimaryStyle}">
         <Setter Property="Foreground" Value="{StaticResource SecondaryBrush}"/>
         <Setter Property="Background" Value="{StaticResource PrimaryBrush}"/>
+    </Style>
+
+    <Style x:Key="PrimaryNormalButtonSytle" TargetType="Button">
+        <Style.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="5" />
+            </Style>
+        </Style.Resources>
+        <Setter Property="FontWeight" Value="Light"/>
+        <Setter Property="Foreground" Value="{StaticResource PrimaryBrush}"/>
+        <Setter Property="Background" Value="{StaticResource SecondaryBrush}"/>
+        <Setter Property="Margin" Value="5"/>
     </Style>
 
     <Style x:Key="ToolTipStyle" TargetType="ToolTip">
