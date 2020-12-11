@@ -1,6 +1,7 @@
 ﻿using MiCurriculum.UI.WPF.Usuario.CustomControls;
 using MiCurriculum.UI.WPF.Usuario.Helpers;
 using MiCurriculum.UI.WPF.Usuario.Views;
+using MiCurriculum.UI.WPF.Usuario.Views.Modals;
 using System;
 using System.Linq;
 using System.Windows;
@@ -14,6 +15,10 @@ namespace MiCurriculum.UI.WPF.Usuario.ViewModels
         public ICommand _closeCommand;
         public ICommand CloseCommand => _closeCommand ?? (_closeCommand = new RelayCommand(OnCloseCommand));
 
+        public ICommand _crearEditarPerfilCommand;
+        public ICommand CrearEditarPerfilCommand => _crearEditarPerfilCommand ?? (_crearEditarPerfilCommand = new RelayCommand(OnCrearEditarPerfil));
+
+
         public MainWindowModel()
         {
 
@@ -21,12 +26,14 @@ namespace MiCurriculum.UI.WPF.Usuario.ViewModels
 
         private void OnCloseCommand()
         {
-            DialogResult result = CustomMessageBox.Show("¿Esta seguro que desear cerrar la aplicación?", CustomMessageBox.CMessageBoxTitle.Confirmación, CustomMessageBox.CMessageBoxButton.Si, CustomMessageBox.CMessageBoxButton.No);
-            if (result == DialogResult.Yes)
-            {
-                System.Windows.Application.Current.Windows.OfType<MainWindow>().FirstOrDefault().Close();
-            }
+            System.Windows.Application.Current.Windows.OfType<MainWindow>().FirstOrDefault().Close();
         }
 
+        private void OnCrearEditarPerfil()
+        {
+            //TODO: Programar respuesta al cerrar el modal y optimizar el código
+            var modal = new CrearEditarPerfilModal();
+            modal.ShowDialog();
+        }
     }
 }

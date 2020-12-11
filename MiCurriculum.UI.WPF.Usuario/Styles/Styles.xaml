@@ -75,4 +75,32 @@
         <Setter Property="Background" Value="{StaticResource PrimaryBrush}"/>
         <Setter Property="Foreground" Value="{StaticResource SecondaryBrush}"/>
     </Style>
+    
+    <!-- Border -->
+    <Style x:Key="BorderCard" TargetType="Border">
+        <Setter Property="Background" Value="{StaticResource PrimaryBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource SecondaryBrush}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="CornerRadius" Value="20"/>
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect ShadowDepth="10" BlurRadius="20"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <!-- TextBox-->
+    <Style x:Key="TextBoxStyle" TargetType="TextBox">
+        <Setter Property="Height" Value="21"/>
+    </Style>
+
+    <Style x:Key="ComboBoxStyle" TargetType="ComboBox">
+        <Setter Property="Height" Value="21"/>
+    </Style>
+
+    <!-- DateTimePicker-->
+    <Style x:Key="DateTimePickerStyle" TargetType="DatePicker">
+        <Setter Property="Height" Value="25"/>
+    </Style>
+
 </ResourceDictionary>

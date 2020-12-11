@@ -8,6 +8,7 @@ namespace MiCurriculum.COMMON.Entidades
         public string Nombres { get; set; }
         public string Apellidos { get; set; }
         public Sexo Sexo { get; set; }
+        public string Profesion { get; set; }
         public byte[] Foto { get; set; }
         public string ResumenProfesional { get; set; }
         public string Dirección { get; set; }

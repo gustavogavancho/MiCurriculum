@@ -57,6 +57,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Contracts\Services\IElementoGenerico.cs" />
+    <Compile Include="CustomControls\CardPerfilesCollection.xaml.cs">
+      <DependentUpon>CardPerfilesCollection.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\CardPerfilItem.xaml.cs">
       <DependentUpon>CardPerfilItem.xaml</DependentUpon>
     </Compile>
@@ -73,6 +76,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Views\Modals\CrearEditarPerfilModal.xaml.cs">
+      <DependentUpon>CrearEditarPerfilModal.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CustomControls\CardPerfilesCollection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CustomControls\CardPerfilItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -86,6 +96,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Modals\CrearEditarPerfilModal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -122,5 +136,15 @@
   <ItemGroup>
     <Resource Include="Imagenes\application.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagenes\personwhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MiCurriculum.COMMON\MiCurriculum.COMMON.csproj">
+      <Project>{8138592a-9601-4773-bc5f-c74fb392a08e}</Project>
+      <Name>MiCurriculum.COMMON</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
